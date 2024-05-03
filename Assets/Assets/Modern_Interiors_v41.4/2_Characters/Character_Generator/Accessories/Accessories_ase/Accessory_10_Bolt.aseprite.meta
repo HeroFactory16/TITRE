@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -103,6 +105,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -124,6 +127,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.05016181}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -144,6 +148,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.05016181}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -164,6 +169,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.05016181}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -190,6 +196,7 @@ ScriptedImporter:
     cells:
     - name: Accessory_10_Bolt_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 31
@@ -198,6 +205,7 @@ ScriptedImporter:
       spriteId: a568246008376c54e8208c7209c9aa2b
     - name: Accessory_10_Bolt_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 31
@@ -206,6 +214,7 @@ ScriptedImporter:
       spriteId: 955392cf19cd69640915b4e8ce436a56
     - name: Accessory_10_Bolt_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 31
@@ -215,6 +224,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 896, y: 656}

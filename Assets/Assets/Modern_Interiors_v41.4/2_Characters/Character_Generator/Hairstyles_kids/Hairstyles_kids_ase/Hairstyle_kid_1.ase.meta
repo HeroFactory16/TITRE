@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -103,6 +105,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -124,6 +127,7 @@ ScriptedImporter:
     pivot: {x: 0.4986945, y: -0.06481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -144,6 +148,7 @@ ScriptedImporter:
     pivot: {x: 0.4986945, y: -0.06481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -164,6 +169,7 @@ ScriptedImporter:
     pivot: {x: 0.4986945, y: -0.06481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -184,6 +190,7 @@ ScriptedImporter:
     pivot: {x: 0.4986945, y: -0.06481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -204,6 +211,7 @@ ScriptedImporter:
     pivot: {x: 0.4986945, y: -0.06481481}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -230,6 +238,7 @@ ScriptedImporter:
     cells:
     - name: Hairstyle_kid_1_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 7
@@ -238,6 +247,7 @@ ScriptedImporter:
       spriteId: d35e2552d2cc362449a232f07da9073f
     - name: Hairstyle_kid_1_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 7
@@ -246,6 +256,7 @@ ScriptedImporter:
       spriteId: 23618323f046da843bbc6806873010b1
     - name: Hairstyle_kid_1_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 7
@@ -254,6 +265,7 @@ ScriptedImporter:
       spriteId: dfc64c201b9a65c4c9ed5c238743d041
     - name: Hairstyle_kid_1_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 7
@@ -262,6 +274,7 @@ ScriptedImporter:
       spriteId: 4a125cbe1f730594fa007093f98ecd57
     - name: Hairstyle_kid_1_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 7
@@ -271,6 +284,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 384, y: 128}

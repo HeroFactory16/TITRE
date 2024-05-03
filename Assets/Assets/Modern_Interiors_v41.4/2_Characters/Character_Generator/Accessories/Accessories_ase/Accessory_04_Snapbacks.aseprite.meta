@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -103,6 +105,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -124,6 +127,7 @@ ScriptedImporter:
     pivot: {x: 0.5005587, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -144,6 +148,7 @@ ScriptedImporter:
     pivot: {x: 0.5005587, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -164,6 +169,7 @@ ScriptedImporter:
     pivot: {x: 0.5005587, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -184,6 +190,7 @@ ScriptedImporter:
     pivot: {x: 0.5005587, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 907
@@ -204,6 +211,7 @@ ScriptedImporter:
     pivot: {x: 0.5005587, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 907
@@ -224,6 +232,7 @@ ScriptedImporter:
     pivot: {x: 0.5005587, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 907
@@ -250,6 +259,7 @@ ScriptedImporter:
     cells:
     - name: Accessory_04_Snapbacks_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 27
@@ -258,6 +268,7 @@ ScriptedImporter:
       spriteId: 622808ca61c257047bec3df2d127c885
     - name: Accessory_04_Snapbacks_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 27
@@ -266,6 +277,7 @@ ScriptedImporter:
       spriteId: bff1fe33507f9d145825af0222af2791
     - name: Accessory_04_Snapbacks_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 27
@@ -274,6 +286,7 @@ ScriptedImporter:
       spriteId: fdcc4397aa4320b42809f9695bc2ade1
     - name: Accessory_04_Snapbacks_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 27
@@ -282,6 +295,7 @@ ScriptedImporter:
       spriteId: 302f6e6e940f85a4cb63ee82eefb48b5
     - name: Accessory_04_Snapbacks_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 27
@@ -290,6 +304,7 @@ ScriptedImporter:
       spriteId: 4c32b16480085fd4894b06fb3854645e
     - name: Accessory_04_Snapbacks_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 27
@@ -299,6 +314,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 896, y: 656}

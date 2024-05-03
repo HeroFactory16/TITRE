@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -103,6 +105,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -124,6 +127,7 @@ ScriptedImporter:
     pivot: {x: 0.50108343, y: -0.025396826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -144,6 +148,7 @@ ScriptedImporter:
     pivot: {x: 0.51675975, y: -0.025396826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -164,6 +169,7 @@ ScriptedImporter:
     pivot: {x: 0.51675975, y: -0.025396826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -184,6 +190,7 @@ ScriptedImporter:
     pivot: {x: 0.51675975, y: -0.025396826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -204,6 +211,7 @@ ScriptedImporter:
     pivot: {x: 0.51675975, y: -0.025396826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -224,6 +232,7 @@ ScriptedImporter:
     pivot: {x: 0.51675975, y: -0.025396826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -244,6 +253,7 @@ ScriptedImporter:
     pivot: {x: 0.51675975, y: -0.025396826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 935
@@ -264,6 +274,7 @@ ScriptedImporter:
     pivot: {x: 0.51675975, y: -0.025396826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 935
@@ -284,6 +295,7 @@ ScriptedImporter:
     pivot: {x: 0.51675975, y: -0.025396826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 935
@@ -310,6 +322,7 @@ ScriptedImporter:
     cells:
     - name: Bodies_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -318,6 +331,7 @@ ScriptedImporter:
       spriteId: 32c12307ba06d6e409433e30da99435f
     - name: Bodies_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -326,6 +340,7 @@ ScriptedImporter:
       spriteId: d2d85e27c0a93b141b3512ecd15adba1
     - name: Bodies_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -334,6 +349,7 @@ ScriptedImporter:
       spriteId: e3792e75b2b3b0541b5bac53b0340484
     - name: Bodies_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -342,6 +358,7 @@ ScriptedImporter:
       spriteId: 85ccf055eb2e95a4bb406139ba2825a3
     - name: Bodies_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -350,6 +367,7 @@ ScriptedImporter:
       spriteId: 7cded422aa9d12f47a71b85767fac349
     - name: Bodies_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -358,6 +376,7 @@ ScriptedImporter:
       spriteId: ca68f184552bdc94daf00efb7be025a9
     - name: Bodies_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -366,6 +385,7 @@ ScriptedImporter:
       spriteId: c81cfa5999345844eac9267f92bc9611
     - name: Bodies_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -374,6 +394,7 @@ ScriptedImporter:
       spriteId: e8b80fb588af6cc4798f8a49eb780578
     - name: Bodies_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -383,6 +404,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 927, y: 656}
