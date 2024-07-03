@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class NetWorkAction : MonoBehaviour
 {
-    public NetworkManager nm;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +19,17 @@ public class NetWorkAction : MonoBehaviour
 
     public void StartServer()
     {
-        nm.StartHost();
+        NetworkManager.Singleton.StartHost();
     }
 
     public void ConnectToServer()
     {
-        nm.StartClient();
-        nm.OnClientConnectedCallback += obj => Debug.Log("Connected: " + obj);
+        NetworkManager.Singleton.StartClient();
+        NetworkManager.Singleton.OnClientConnectedCallback += obj => Debug.Log("Connected: " + obj);
+    }
+
+    public void LoadGameScene()
+    {
+        NetworkManager.Singleton.SceneManager.LoadScene("SampleScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 }

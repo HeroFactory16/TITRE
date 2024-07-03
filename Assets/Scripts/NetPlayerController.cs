@@ -15,6 +15,7 @@ public class NetPlayerController : NetworkBehaviour
     public Animator PlayerAnimator;
     public bool facingLeft = true;
     public SpriteRenderer PlayerSpriteRenderer;
+    public List<NetCollectible> inventory;
     //public GameObject personalUI;
 
     // Start is called before the first frame update
@@ -45,6 +46,23 @@ public class NetPlayerController : NetworkBehaviour
         {
             transform.position = Position.Value;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (IsServer)
+        {
+            if (collision.GetComponent<NetCollectible>() != null)
+            {
+                AddToInventory(collision.GetComponent<NetCollectible>());
+                Destroy(collision.gameObject);
+            }
+        }
+    }
+
+    void AddToInventory(NetCollectible collectible)
+    {
+        inventory.Add(collectible);
     }
 
     [Rpc(SendTo.Server)]
