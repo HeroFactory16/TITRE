@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class NetPlayerController : NetworkBehaviour
 {
@@ -16,12 +17,17 @@ public class NetPlayerController : NetworkBehaviour
     public bool facingLeft = true;
     public SpriteRenderer PlayerSpriteRenderer;
     public List<NetCollectible> inventory;
+    public Rigidbody2D playerRigidBody;
+    public GlobalScore globalScore;
+    public PersonalScore personalScore;
+    public int personalScoreValue;
+
     //public GameObject personalUI;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        personalScore = FindFirstObjectByType<PersonalScore>();
     }
 
     // Update is called once per frame
@@ -44,7 +50,7 @@ public class NetPlayerController : NetworkBehaviour
 
         if (IsServer)
         {
-            transform.position = Position.Value;
+            playerRigidBody.MovePosition(Position.Value);
         }
     }
 
@@ -52,17 +58,25 @@ public class NetPlayerController : NetworkBehaviour
     {
         if (IsServer)
         {
+            Debug.Log("Collision with " +  collision.name);
             if (collision.GetComponent<NetCollectible>() != null)
             {
-                AddToInventory(collision.GetComponent<NetCollectible>());
-                Destroy(collision.gameObject);
+                AddToInventoryRpc(collision.GetComponent<NetCollectible>());
             }
         }
     }
 
-    void AddToInventory(NetCollectible collectible)
+    [Rpc(SendTo.Server)]
+    void AddToInventoryRpc(NetworkBehaviourReference collectible)
     {
-        inventory.Add(collectible);
+        var c = (NetCollectible) collectible;
+        if (c.isVisible.Value)
+        {
+            inventory.Add(c);
+            c.ChangeVisibility(c.isVisible.Value, false);
+            globalScore.IncrementScoreRpc();
+            IncrementScoreRpc();
+        }
     }
 
     [Rpc(SendTo.Server)]
@@ -73,13 +87,13 @@ public class NetPlayerController : NetworkBehaviour
 
         if ((moveX == 0 && moveY == 0) && (inputs.x != 0 || inputs.y != 0))
         {
-            Debug.Log("lastDir.x = " + lastDirection.x + " y = " + lastDirection.y);
+            //Debug.Log("lastDir.x = " + lastDirection.x + " y = " + lastDirection.y);
             lastDirection = inputs;
         }
 
         inputs = actualInput;
 
-        var position = transform.position;
+        var position = playerRigidBody.position;
         position.x += actualInput.x * speed * NetworkManager.ServerTime.FixedDeltaTime;
         position.y += actualInput.y * speed * NetworkManager.ServerTime.FixedDeltaTime;
         Position.Value = position;
@@ -106,6 +120,14 @@ public class NetPlayerController : NetworkBehaviour
         UpdateFacingLeftRpc();
     }
 
+    [Rpc(SendTo.Owner)]
+    public void IncrementScoreRpc()
+    {
+        personalScoreValue++;
+        personalScore.SetScore(personalScoreValue);
+        Debug.Log("Score = " + personalScoreValue);
+    }
+
     [Rpc(SendTo.Everyone)]
     void UpdateFacingLeftRpc()
     {
@@ -115,6 +137,8 @@ public class NetPlayerController : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
+        playerRigidBody.isKinematic = false;
+        globalScore = FindFirstObjectByType<GlobalScore>();
         if (NetworkObject.IsLocalPlayer)
         {
             Debug.Log("Name " + gameObject.name);
