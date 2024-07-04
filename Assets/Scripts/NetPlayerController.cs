@@ -4,6 +4,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
+using Unity.Cinemachine;
 
 public class NetPlayerController : NetworkBehaviour
 {
@@ -139,8 +140,18 @@ public class NetPlayerController : NetworkBehaviour
         base.OnNetworkSpawn();
         playerRigidBody.isKinematic = false;
         globalScore = FindFirstObjectByType<GlobalScore>();
+
+
         if (NetworkObject.IsLocalPlayer)
         {
+            CinemachineCamera playerCamera = FindFirstObjectByType<CinemachineCamera>();
+
+            if (playerCamera != null)
+            {
+                playerCamera.LookAt = gameObject.transform;
+                playerCamera.Follow = gameObject.transform;
+            }
+
             Debug.Log("Name " + gameObject.name);
             PIA = new PlayerInputActions();
             PIA.Enable();
